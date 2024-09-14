@@ -83,6 +83,63 @@ table tr:nth-child(even) {
   margin: 0 auto;
   padding: 20px;
 }
+/* Estilo para bloques de código */
+pre {
+  background-color: #F3F4F6; /* Tailwind slate-100 */
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 16px;
+}
+
+code {
+  background-color: #E5E7EB; /* Tailwind slate-200 */
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+/* Opcional: Colores personalizados para Prism.js */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6B7280; /* Tailwind slate-500 */
+}
+
+.token.punctuation {
+  color: #374151; /* Tailwind slate-700 */
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #EF4444; /* Tailwind red-500 */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #10B981; /* Tailwind green-500 */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #3B82F6; /* Tailwind blue-500 */
+}
+
+.token.keyword {
+  color: #6366F1; /* Tailwind indigo-500 */
+}
 
 @media (max-width: 768px) {
   body {
