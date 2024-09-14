@@ -12,7 +12,7 @@ Separaremos las responsabilidades en dos clases diferentes:
 1. **Pedido**: Gestiona la lista de productos y su precio total.
 2. **ProcesadorPagos**: Gestiona el procesamiento del pago.
 
-#### **Implementación con Tipado y Documentación:**
+#### **Implementación**
 
 ```python
 from typing import List
@@ -110,7 +110,7 @@ Si agregamos más métodos de pago a la clase `ProcesadorPagos`, tendríamos que
 #### **Solución:**
 Usaremos **herencia y abstracción** para permitir que nuevas clases extiendan la funcionalidad de procesamiento de pagos sin modificar la clase base.
 
-#### **Implementación con Tipado y Documentación:**
+#### **Implementación**
 
 ```python
 from abc import ABC, abstractmethod
