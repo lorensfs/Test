@@ -1,0 +1,24 @@
+# Site settings
+title: "Documentation Site"
+description: "A site to showcase Markdown guides"
+baseurl: "" # Leave empty unless using a project page
+url: "https://lorensfs.github.io/Test/" # Replace with your GitHub Pages URL
+
+# Markdown processing
+markdown: kramdown
+
+# No theme, as you're just rendering Markdown
+theme: jekyll-theme-minimal # Or choose another minimal theme
+
+# Plugins (optional, for sitemap and RSS feed)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - "Guía simple para crear librería en Python.md"
+
+# Permalinks for clean URLs
+permalink: pretty
