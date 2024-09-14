@@ -5,17 +5,21 @@ baseurl: "/Test" # Ajusta a tu nombre de repositorio
 url: "https://lorensfs.github.io"
 markdown: kramdown
 
-# Tema para el diseño
-theme: jekyll-theme-cayman  # O usa jekyll-theme-minimal si prefieres algo más sencillo
+# Tema personalizado minimalista con soporte para dark mode
+theme: jekyll-theme-minimal  # O jekyll-theme-cayman para algo más visual
 
-# Plugins para RSS y Sitemap (opcional)
+# Plugins (opcional)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Excluir archivos markdown específicos
+# Excluir archivos específicos
 exclude:
   - "Guía simple para crear librería en Python.md"
 
-# Estructura de permalinks para URLs limpias
+# Permalinks
 permalink: pretty
+
+# Dark mode toggle support (simple implementation)
+custom_css: styles.css
+
