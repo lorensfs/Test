@@ -1,25 +1,24 @@
 # Configuración del sitio
 title: "Sitio de Documentación"
-description: "Guías útiles sobre Python y Markdown"
-baseurl: "/Test" # Ajusta a tu nombre de repositorio
+description: "Guías claras y legibles sobre Python y Markdown"
+baseurl: "/Test" # Ajusta según tu repositorio
 url: "https://lorensfs.github.io"
 markdown: kramdown
 
-# Tema personalizado minimalista con soporte para dark mode
-theme: jekyll-theme-minimal  # O jekyll-theme-cayman para algo más visual
+# Tema minimalista para legibilidad
+theme: jekyll-theme-minimal
 
-# Plugins (opcional)
+# Plugins opcionales
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Excluir archivos específicos
+# Excluir archivos que no deben mostrarse
 exclude:
   - "Guía simple para crear librería en Python.md"
 
-# Permalinks
+# Estructura de enlaces permanentes
 permalink: pretty
 
-# Dark mode toggle support (simple implementation)
+# Añadir CSS personalizado para mejorar la legibilidad
 custom_css: styles.css
-
