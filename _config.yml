@@ -1,5 +1,5 @@
-title: "Test Site"
-description: "A test site for Markdown guides"
+title: "Documentation Site"
+description: "A site showcasing guides"
 baseurl: "/Test"
 url: "https://lorensfs.github.io"
 markdown: kramdown
