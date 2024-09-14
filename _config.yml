@@ -1,21 +1,21 @@
-# Site settings
-title: "Documentation Site"
-description: "Useful Guides on Python and Markdown"
-baseurl: "/Test" # Adjust to your repository name
+# Configuración del sitio
+title: "Sitio de Documentación"
+description: "Guías útiles sobre Python y Markdown"
+baseurl: "/Test" # Ajusta a tu nombre de repositorio
 url: "https://lorensfs.github.io"
 markdown: kramdown
 
-# Theme for styling
-theme: jekyll-theme-cayman  # Or jekyll-theme-minimal if you prefer more simplicity
+# Tema para el diseño
+theme: jekyll-theme-cayman  # O usa jekyll-theme-minimal si prefieres algo más sencillo
 
-# Plugins for RSS and Sitemap (optional)
+# Plugins para RSS y Sitemap (opcional)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Exclude specific markdown files
+# Excluir archivos markdown específicos
 exclude:
   - "Guía simple para crear librería en Python.md"
 
-# Permalink structure for clean URLs
+# Estructura de permalinks para URLs limpias
 permalink: pretty
