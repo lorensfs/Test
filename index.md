@@ -1,7 +1,3 @@
-# 📚 Bienvenido a Mi Sitio de Documentación
-
-Explora guías útiles:
-
 ---
 
 ## 🚀 Guías Disponibles
@@ -20,4 +16,4 @@ Explora guías útiles:
   
 ---
 
-¡Explora las guías y aprende más sobre cómo escribir mejor código y documentación!
+
