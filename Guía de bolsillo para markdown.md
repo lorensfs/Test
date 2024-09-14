@@ -305,7 +305,9 @@ Resultado:
 <details>
   <summary>Haz clic para expandir</summary>
   
-  ![Texto alternativo](https://ih1.redbubble.net/image.1079895004.9123/st,small,507x507-pad,600x600,f8f8f8.jpg)
+  <img src="https://ih1.redbubble.net/image.1079895004.9123/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Texto alternativo" width="300" />
 
-> *By Lorenzo Fuentes Soto*
+  > *By Lorenzo Fuentes Soto*
+  
 </details>
+
