@@ -1,32 +1,84 @@
-/* Basic dark mode styling */
+/* Mejora de la legibilidad general */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Links */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+}
+
 a {
-  color: #bb86fc;
+  color: #2980b9;
+  text-decoration: none;
 }
 
-/* Add dark mode toggle */
-#dark-mode-toggle {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: #e0e0e0;
-  color: #121212;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+a:hover {
+  text-decoration: underline;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+p {
+  margin: 10px 0;
 }
 
-body.dark-mode a {
-  color: #bb86fc;
+code {
+  background-color: #eaeaea;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Ajustes para la legibilidad de listas */
+ul, ol {
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Espaciado entre elementos */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 10px;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+/* Mejora del diseño de tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
