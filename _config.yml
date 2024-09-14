@@ -1,9 +1,21 @@
+# Site settings
 title: "Documentation Site"
-description: "A site showcasing guides"
-baseurl: "/Test"
+description: "Useful Guides on Python and Markdown"
+baseurl: "/Test" # Adjust to your repository name
 url: "https://lorensfs.github.io"
 markdown: kramdown
-theme: jekyll-theme-minimal
+
+# Theme for styling
+theme: jekyll-theme-cayman  # Or jekyll-theme-minimal if you prefer more simplicity
+
+# Plugins for RSS and Sitemap (optional)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude specific markdown files
 exclude:
   - "Guía simple para crear librería en Python.md"
+
+# Permalink structure for clean URLs
 permalink: pretty
