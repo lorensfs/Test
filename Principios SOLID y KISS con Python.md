@@ -21,11 +21,11 @@ class Pedido:
     """
     Clase Pedido que representa una orden de compra.
 
-    Atributos:
-    - items: Lista de nombres de los productos.
-    - cantidades: Lista de cantidades por producto.
-    - precios: Lista de precios por producto.
-    - estado: Estado del pedido, puede ser "abierto" o "pagado".
+    Attributes:
+        items (List[str]): Lista de nombres de los productos.
+        cantidades (List[int]): Lista de cantidades por producto.
+        precios (List[float]): Lista de precios por producto.
+        estado (str): Estado del pedido, puede ser "abierto" o "pagado".
     """
 
     def __init__(self) -> None:
@@ -38,9 +38,10 @@ class Pedido:
         """
         Agrega un producto al pedido.
 
-        :param nombre: Nombre del producto.
-        :param cantidad: Cantidad del producto.
-        :param precio: Precio unitario del producto.
+        Args:
+            nombre (str): Nombre del producto.
+            cantidad (int): Cantidad del producto.
+            precio (float): Precio unitario del producto.
         """
         self.items.append(nombre)
         self.cantidades.append(cantidad)
@@ -50,7 +51,8 @@ class Pedido:
         """
         Calcula el precio total del pedido.
 
-        :return: El total a pagar basado en las cantidades y precios de los productos.
+        Returns:
+            float: El total a pagar basado en las cantidades y precios de los productos.
         """
         total: float = 0
         for i in range(len(self.precios)):
@@ -67,8 +69,9 @@ class ProcesadorPagos:
         """
         Procesa un pago por débito.
 
-        :param pedido: Instancia de la clase Pedido.
-        :param codigo_seguridad: Código de seguridad de la tarjeta.
+        Args:
+            pedido (Pedido): Instancia de la clase Pedido.
+            codigo_seguridad (str): Código de seguridad de la tarjeta.
         """
         print("Procesando pago con débito")
         print(f"Verificando código de seguridad: {codigo_seguridad}")
@@ -78,8 +81,9 @@ class ProcesadorPagos:
         """
         Procesa un pago por crédito.
 
-        :param pedido: Instancia de la clase Pedido.
-        :param codigo_seguridad: Código de seguridad de la tarjeta.
+        Args:
+            pedido (Pedido): Instancia de la clase Pedido.
+            codigo_seguridad (str): Código de seguridad de la tarjeta.
         """
         print("Procesando pago con crédito")
         print(f"Verificando código de seguridad: {codigo_seguridad}")
@@ -114,6 +118,50 @@ Usaremos **herencia y abstracción** para permitir que nuevas clases extiendan l
 
 ```python
 from abc import ABC, abstractmethod
+from typing import List
+
+class Pedido:
+    """
+    Clase Pedido que representa una orden de compra.
+
+    Attributes:
+        items (List[str]): Lista de nombres de los productos.
+        cantidades (List[int]): Lista de cantidades por producto.
+        precios (List[float]): Lista de precios por producto.
+        estado (str): Estado del pedido, puede ser "abierto" o "pagado".
+    """
+
+    def __init__(self) -> None:
+        self.items: List[str] = []
+        self.cantidades: List[int] = []
+        self.precios: List[float] = []
+        self.estado: str = "abierto"
+
+    def agregar_item(self, nombre: str, cantidad: int, precio: float) -> None:
+        """
+        Agrega un producto al pedido.
+
+        Args:
+            nombre (str): Nombre del producto.
+            cantidad (int): Cantidad del producto.
+            precio (float): Precio unitario del producto.
+        """
+        self.items.append(nombre)
+        self.cantidades.append(cantidad)
+        self.precios.append(precio)
+
+    def precio_total(self) -> float:
+        """
+        Calcula el precio total del pedido.
+
+        Returns:
+            float: El total a pagar basado en las cantidades y precios de los productos.
+        """
+        total: float = 0
+        for i in range(len(self.precios)):
+            total += self.cantidades[i] * self.precios[i]
+        return total
+
 
 class ProcesadorPagos(ABC):
     """
@@ -125,8 +173,9 @@ class ProcesadorPagos(ABC):
         """
         Método abstracto para procesar el pago.
 
-        :param pedido: Instancia de la clase Pedido.
-        :param codigo_seguridad: Código de seguridad para la autenticación.
+        Args:
+            pedido (Pedido): Instancia de la clase Pedido.
+            codigo_seguridad (str): Código de seguridad para la autenticación.
         """
         pass
 
@@ -140,8 +189,9 @@ class ProcesadorDebito(ProcesadorPagos):
         """
         Procesa un pago por débito.
 
-        :param pedido: Instancia de la clase Pedido.
-        :param codigo_seguridad: Código de seguridad de la tarjeta.
+        Args:
+            pedido (Pedido): Instancia de la clase Pedido.
+            codigo_seguridad (str): Código de seguridad de la tarjeta.
         """
         print("Procesando pago con débito")
         print(f"Verificando código de seguridad: {codigo_seguridad}")
@@ -157,8 +207,9 @@ class ProcesadorCredito(ProcesadorPagos):
         """
         Procesa un pago por crédito.
 
-        :param pedido: Instancia de la clase Pedido.
-        :param codigo_seguridad: Código de seguridad de la tarjeta.
+        Args:
+            pedido (Pedido): Instancia de la clase Pedido.
+            codigo_seguridad (str): Código de seguridad de la tarjeta.
         """
         print("Procesando pago con crédito")
         print(f"Verificando código de seguridad: {codigo_seguridad}")

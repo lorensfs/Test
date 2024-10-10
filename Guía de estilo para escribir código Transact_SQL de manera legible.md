@@ -1,9 +1,9 @@
 
-# Guía para Mantener la Legibilidad y Buenas Prácticas en Transact-SQL (T-SQL)
+# Guía para Mantener la Legibilidad y Buenas Prácticas en ANSI SQL
 
-La legibilidad y el mantenimiento de código son aspectos clave para un buen desarrollo en **Transact-SQL (T-SQL)**, el dialecto de SQL utilizado en Microsoft SQL Server y Azure SQL Database. 
+La legibilidad y el mantenimiento de código son aspectos clave para un buen desarrollo en **ANSI SQL**, el dialecto de SQL utilizado en Spark SQL. 
 
-Esta guía cubre recomendaciones y técnicas para mejorar la legibilidad del código T-SQL, fomentar buenas prácticas, y facilitar su mantenimiento.
+Esta guía cubre recomendaciones y técnicas para mejorar la legibilidad del código, fomentar buenas prácticas, y facilitar su mantenimiento.
 
 ---
 
@@ -174,27 +174,7 @@ WHERE Empleados.DepartamentoID = Departamentos.DepartamentoID;
 
 ---
 
-## 8. **Uso de Variables y Nombres Descriptivos**
-
-En T-SQL, las variables deben tener nombres descriptivos y seguir una convención uniforme (como `snake_case` o `PascalCase`), para facilitar su comprensión.
-
-```sql
--- Correcto
-DECLARE @total_empleados INT;
-DECLARE @nombre_departamento NVARCHAR(100);
-
--- Incorrecto
-DECLARE @x INT;
-DECLARE @y NVARCHAR(100);
-```
-
-### Buenas Prácticas:
-- Usa prefijos como `@total_`, `@nombre_`, `@fecha_` para identificar claramente lo que contiene la variable.
-- Mantén nombres claros y fáciles de leer.
-
----
-
-## 9. **Cuidado con la Anidación de Subconsultas** *(CONSULTAR LA NOTA)*
+## 8. **Cuidado con la Anidación de Subconsultas** *(CONSULTAR LA NOTA)*
 
 Aunque las subconsultas son útiles, evita anidarlas profundamente. Las subconsultas complejas pueden volverse difíciles de leer y de mantener. Considera usar **Common Table Expressions (CTE)** cuando sea necesario.
 
@@ -227,7 +207,7 @@ ORDER BY Nombre;
 
 ---
 
-## 10. **Evitar Funciones Escalares en el SELECT o WHERE**
+## 9. **Evitar Funciones Escalares en el SELECT o WHERE**
 
 Evita el uso de funciones escalares en la cláusula `SELECT` o `WHERE`, ya que pueden afectar negativamente el rendimiento. Si necesitas aplicar lógica compleja, considera utilizar una CTE o una columna calculada.
 
@@ -291,6 +271,28 @@ WHERE
 
 1. **Mejor rendimiento**: El cálculo de `dbo.fn_CalcularImpuesto(Salario)` se realiza solo **una vez** por fila en la CTE, en lugar de realizarse dos veces (una para el `SELECT` y otra para el `WHERE`).
 2. **Legibilidad**: El código es más claro y fácil de mantener.
+---
+
+# Adicional para Transact-SQL
+
+## 10. **Uso de Variables y Nombres Descriptivos**
+
+En T-SQL, las variables deben tener nombres descriptivos y seguir una convención uniforme (como `snake_case` o `PascalCase`), para facilitar su comprensión.
+
+```sql
+-- Correcto
+DECLARE @total_empleados INT;
+DECLARE @nombre_departamento NVARCHAR(100);
+
+-- Incorrecto
+DECLARE @x INT;
+DECLARE @y NVARCHAR(100);
+```
+
+### Buenas Prácticas:
+- Usa prefijos como `@total_`, `@nombre_`, `@fecha_` para identificar claramente lo que contiene la variable.
+- Mantén nombres claros y fáciles de leer.
+
 ---
 
 ## 11. **Documentación de Procedimientos Almacenados (Stored Procedures)**
