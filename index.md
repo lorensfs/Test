@@ -11,7 +11,7 @@
 - **[Guía de estilo para escribir código Python de manera legible](./Guía de estilo para escribir código Python de manera legible.md)**
   - Guía de estilo para escribir código Python legible, facilitando la colaboración y comprensión.
 
-- **[Guía de estilo para escribir código Transact_SQL de manera legible](./Guía de estilo para escribir código ANSI_SQL de manera legible.md)**
+- **[Guía de estilo para escribir código ANSI_SQL de manera legible](./Guía de estilo para escribir código ANSI_SQL de manera legible.md)**
   - Mejores prácticas para escribir código ANSI-SQL limpio y legible.
   
 
